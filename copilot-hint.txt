@@ -1,0 +1,1 @@
+Use English for all source code strings, prompts, and comments.
