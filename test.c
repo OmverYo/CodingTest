@@ -1,12 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-    int N = 5;
-    for (int i = 1; i <= 2 * N - 1; i++)
+    char str[11] = "foundation";
+    int len = 0;
+    while (str[len] != '\0')
+        len++;
+
+    for (int i = 0; i < len / 2; i++)
     {
-        printf("*");
+        char temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
     }
+
+    printf("%s", str);
 
     return 0;
 }
